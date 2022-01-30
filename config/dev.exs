@@ -2,6 +2,7 @@ import Config
 
 # Configure your database
 config :api_arvore, ApiArvore.Repo,
+  adapter: Ecto.Adapter.MySQL,
   username: "root",
   password: "",
   hostname: "localhost",
