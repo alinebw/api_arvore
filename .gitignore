@@ -32,3 +32,5 @@ api_arvore-*.tar
 npm-debug.log
 /assets/node_modules/
 
+# Using environment variables to keep logins and passwords safe.
+.env
