@@ -20,7 +20,7 @@ defmodule ApiArvore.MixProject do
   def application do
     [
       mod: {ApiArvore.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:phoenix, :cowboy, :logger, :phoenix_ecto, :mariaex, :runtime_tools]
     ]
   end
 
