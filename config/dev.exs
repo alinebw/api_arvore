@@ -3,9 +3,10 @@ import Config
 # Configure your database
 config :api_arvore, ApiArvore.Repo,
   adapter: Ecto.Adapter.MySQL,
-  username: System.get_env("BD_USER"),
-  password: System.get_env("BD_PASSWORD"),
+  username: "root",
+  password: "Bromeli@s2022",
   hostname: "localhost",
+  port: 3306,
   database: "api_arvore_dev",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
