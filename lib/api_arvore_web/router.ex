@@ -14,10 +14,13 @@ defmodule ApiArvoreWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", ApiArvoreWeb do
-    pipe_through :browser
+  scope "/api", ApiArvoreWeb do
+    pipe_through :api
 
     get "/", PageController, :index
+
+    resources "/partners", EntityController
+    
   end
 
   # Other scopes may use custom stacks.

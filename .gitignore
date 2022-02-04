@@ -31,6 +31,3 @@ api_arvore-*.tar
 # In case you use Node.js/npm, you want to ignore these.
 npm-debug.log
 /assets/node_modules/
-
-# Using environment variables to keep logins and passwords safe.
-.env
