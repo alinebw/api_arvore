@@ -8,7 +8,7 @@ defmodule ApiArvore.PartnersTest do
 
     import ApiArvore.PartnersFixtures
 
-    @invalid_attrs %{entity_type: nil, inep: nil, name: nil, parent_id: nil, subtree_ids: nil}
+    @invalid_attrs %{entity_type: nil, inep: nil, name: nil, subtree_ids: nil}
 
     test "list_school/0 returns all school" do
       entity = entity_fixture()
@@ -21,7 +21,7 @@ defmodule ApiArvore.PartnersTest do
     end
 
     test "create_entity/1 with valid data creates a entity" do
-      valid_attrs = %{entity_type: "some entity_type", inep: 42, name: "some name", parent_id: 42, subtree_ids: []}
+      valid_attrs = %{entity_type: "some entity_type", inep: 42, name: "some name", parent_id: nil, subtree_ids: []}
 
       assert {:ok, %Entity{} = entity} = Partners.create_entity(valid_attrs)
       assert entity.entity_type == "some entity_type"
@@ -37,13 +37,13 @@ defmodule ApiArvore.PartnersTest do
 
     test "update_entity/2 with valid data updates the entity" do
       entity = entity_fixture()
-      update_attrs = %{entity_type: "some updated entity_type", inep: 43, name: "some updated name", parent_id: 43, subtree_ids: []}
+      update_attrs = %{entity_type: "some updated entity_type", inep: 43, name: "some updated name", parent_id: nil, subtree_ids: []}
 
       assert {:ok, %Entity{} = entity} = Partners.update_entity(entity, update_attrs)
       assert entity.entity_type == "some updated entity_type"
       assert entity.inep == 43
       assert entity.name == "some updated name"
-      assert entity.parent_id == 43
+      assert entity.parent_id == nil
       assert entity.subtree_ids == []
     end
 
