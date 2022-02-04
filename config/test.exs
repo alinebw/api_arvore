@@ -8,7 +8,7 @@ import Config
 config :api_arvore, ApiArvore.Repo,
   adapter: Ecto.Adapter.MySQL,
   username: "root",
-  password: "Bromeli@s",
+  password: "Bromeli@s2022",
   hostname: "localhost",
   port: 3306,
   database: "api_arvore_test#{System.get_env("MIX_TEST_PARTITION")}",
