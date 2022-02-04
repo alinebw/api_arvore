@@ -12,6 +12,6 @@ defmodule ApiArvore.Repo.Migrations.CreateSchool do
 
     end
 
-    create unique_index(:school, [:parent_id])
+    create unique_index(:school, [:id])
   end
 end
